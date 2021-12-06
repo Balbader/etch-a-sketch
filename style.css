@@ -1,41 +1,71 @@
+@keyframes title {
+  0% {
+    opacity: 0;
+    letter-spacing: 150px;
+  }
+  50% {
+    letter-spacing: 50px;
+  }
+  100% {
+    opacity: 0.8;
+    letter-spacing: 3px;
+    text-shadow: 0 0 1px black;
+  }
+}
+
 * {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
 }
+
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: white;
-  margin-top: -30px;
+  overflow: hidden;
+  margin: 0;
+  min-height: 100vh;
 }
 
-h1 {
+#title {
   font-size: 70px;
-  color: black;
-  text-shadow: 5px 5px white;
+  text-transform: uppercase;
+  animation: title 4s linear forwards;
+}
+
+#canvas {
+  display: flex;
+  gap: 20px;
 }
 
 .btns {
   display: flex;
-  flex-direction: row;
-  width: 700px;
-  height: 50px;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 600px;
+  width: 150px;
+  border: 1px solid black;
+}
+
+#picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+  width: 130px;
+  border: 1px solid black;
 }
 
 button {
-  width: 100px;
-  font-size: 30px;
-  background-color: white;
-  box-shadow: 5px 5px;
-  outline: none;
-}
-
-.color-and-prompt p {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  width: 130px;
+  height: 50px;
   font-size: 20px;
-  text-shadow: 2px 2px yellow;
+  background-color: white;
+  border: 1px solid black;
+  outline: none;
 }
 
 #color {
@@ -61,15 +91,21 @@ button:active {
   transform: scale(1.2);
 }
 
+#black :hover {
+  background: black;
+  color: white;
+}
+
 #RGB {
   background: linear-gradient(to right, #43cea2, #24fc03, #fc8803);
 }
 
 .slider-and-value {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  width: 130px;
+  padding: 5px;
+  border: 1px solid black;
 }
 
 #slider {
@@ -81,8 +117,8 @@ button:active {
 
 #slider::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 25px;
-  height: 25px;
+  width: 15px;
+  height: 15px;
   background: white;
   border-radius: 50px;
 }
@@ -95,23 +131,21 @@ button:active {
 }
 
 .value {
-  font-size: 30px;
+  font-size: 15px;
   padding-left: 10px;
   color: black;
   text-shadow: 2px 2px white;
 }
 
 .grid {
-  margin-top: 50px;
   display: inline-grid;
   grid-template-columns: repeat(16, 2fr);
   grid-template-rows: repeat(16, 2fr);
   border: 5px solid white;
   border-radius: 5px;
-  height: 575px;
-  width: 575px;
+  height: 600px;
+  width: 900px;
   background-color: gray;
-  box-shadow: 10px 10px;
 }
 
 .cell {
@@ -120,10 +154,9 @@ button:active {
 }
 
 footer {
-  font-size: 25px;
-  bottom: 0;
-  justify-content: center;
-  padding-top: 50px;
+  font-size: 15px;
+  margin-top: auto;
+  padding-bottom: 20px;
 }
 
 a {
@@ -136,8 +169,8 @@ a:hover {
 }
 
 #gh-logo {
-  width: 35px;
-  height: 35px;
-  margin-bottom: -9px;
+  width: 25px;
+  height: 25px;
+  margin-bottom: -5px;
   margin-right: 10px;
 }
