@@ -5,4 +5,4 @@ This project is part of the Odin's Project Foundation Path.<br>
 
 ## Live Preview
 
-<br>
+![live-preview](https://balbader.github.io/etch-a-sketch/)
