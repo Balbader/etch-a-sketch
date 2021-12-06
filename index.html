@@ -7,21 +7,25 @@
     <title>Etch a Sketch</title>
   </head>
   <body>
-    <h1 id="main-title">Etch A Sketch</h1>
-    <div class="btns">
-      <button id="reset">Reset</button>
-      <button id="black">Black</button>
-      <button id="RGB">RGB</button>
-      <div class="color-and-prompt">
-        <input type="color" id="color" />
-        <p>Choose a color</p>
-      </div>
-      <div class="slider-and-value">
-        <input type="range" min="2" max="100" value="16" id="slider" />
-        <p class="value">16</p>
-      </div>
+    <div id="title">
+      <h1 id="main-title">Etch A Sketch</h1>
     </div>
-    <div class="grid"></div>
+    <div id="canvas">
+      <div class="btns">
+        <button id="reset">Reset</button>
+        <button id="black">Black</button>
+        <button id="RGB">RGB</button>
+        <div id="picker">
+          <p>Color Picker</p>
+          <input type="color" id="color" />
+        </div>
+        <div class="slider-and-value">
+          <p>Grid Size: <span class="value">16</span></p>
+          <input type="range" min="2" max="100" value="16" id="slider" />
+        </div>
+      </div>
+      <div class="grid"></div>
+    </div>
     <footer>
       Made with ❤️ by:
       <a href="https://github.com/Balbader"
